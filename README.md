@@ -28,28 +28,28 @@ Bonus: Show best way to have different types of TrainCars (i.e. cargo, passenger
 
 # USAGE EXAMPLES:
 
-NEW SINGLE CAR
+- NEW SINGLE CAR
 
 ```$newcar = ["2.5", "cargo", "back"]```    
 ```addCars($newcar, $train)```
 
-REMOVE CAR with:  "back" OR "front"
+- REMOVE CAR with:  "back" OR "front"
 
 ```$train->remove_TrainCars("back")``` 
 
-GET NUMBER OF TRAIN CARTS
+- GET NUMBER OF TRAIN CARTS
 
 ```$train->get_Train_Carts_count()```
 
-GET WEIGHT OF TRAIN
+- GET WEIGHT OF TRAIN
 
 ```$train->get_Train_Weight()```
 
- GET WEIGHT OF PARTICULAR TRAIN CAR USING INDEX OF CAR ON TRAIN
+ - GET WEIGHT OF PARTICULAR TRAIN CAR USING INDEX OF CAR ON TRAIN
 
 ```$train->get_Train_Carts()[2]->get_weight()```
 
- GET TYPE OF PARTICULAR TRAIN CAR USING INDEX OF CAR ON TRAIN
+ - GET TYPE OF PARTICULAR TRAIN CAR USING INDEX OF CAR ON TRAIN
 
 ```$train->get_Train_Carts()[1]->get_type()```
 
@@ -58,12 +58,16 @@ GET WEIGHT OF TRAIN
 
 EXAMPLE WITHOUT ARRAYS FOR SINGLE CAR 
 
+
+- SET WEIGHT AND TYPE
+
 ```$car1 = new TrainCar();```
 ```$car1->set_weight('3.5');```
 ```$car1->set_type('passenger');```
 
 ```if($train->set_TrainCars($car1, "back") === false){ echo  "Limit of cars excited<br>"; }```
 
- GET SINGLE CAR WEIGHT
+ - GET SINGLE CAR WEIGHT
+ 
  ```$car1->get_weight()```
    
