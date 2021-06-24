@@ -28,14 +28,14 @@ Bonus: Show best way to have different types of TrainCars (i.e. cargo, passenger
 
 # USAGE EXAMPLES:
 
-## GET NUMBER OF TRAIN CARTS
+GET NUMBER OF TRAIN CARTS
 
-```echo $train->get_Train_Carts_count() . " Cars on train<br>";```
+```$train->get_Train_Carts_count()```
 
-## GET WEIGHT OF TRAIN
+GET WEIGHT OF TRAIN
 
-```echo $train->get_Train_Weight() . " tones is weight off train.<br>";```
+```$train->get_Train_Weight()```
 
-## GET WEIGHT OF PARTICULAR TRAIN CAR USING INDEX OF CAR ON TRAIN
+ GET WEIGHT OF PARTICULAR TRAIN CAR USING INDEX OF CAR ON TRAIN
 
-```echo  $train->get_Train_Carts()[2]->get_weight() . " particular train car weight <br>";```
+```$train->get_Train_Carts()[2]->get_weight()```
