@@ -38,7 +38,6 @@ class Train
     }
 }
 
-$train = new Train();
 
 class TrainCar
 {
@@ -64,7 +63,10 @@ class TrainCar
     }
 }
 
+// NEW TRAIN
+$train = new Train();
 
+//NEW CARTS EXAMPLES:
 $car1 = new TrainCar();
 $car1->set_weight('1');
 $car1->set_type('cargo');
@@ -72,8 +74,7 @@ $car1->set_type('cargo');
 $car2 = new TrainCar();
 $car2->set_weight('2');
 $car2->set_type('passenger');
-// echo $car1->get_weight() . "<br>";
-// echo $car2->get_weight() . "<br>";
+
 
 $car3 = new TrainCar();
 $car3->set_weight('3.5');
@@ -87,6 +88,11 @@ $train->set_TrainCars($car3, "back");
 
 // print_r($train->get_Train()) . "<br></br>";
 
+// GET NUMBER OF TRAIN CARTS
 echo $train->get_Train_Carts() . " Cars on train<br>";
 
-print_r($train->get_Train_Weight() . " tones is weight off train.<br>");
+// GET WEIGHT OF TRAIN
+echo $train->get_Train_Weight() . " tones is weight off train.<br>";
+
+// GET WEIGHT OF PARTICULAR TRAIN CAR
+echo $car1->get_weight() . " car1 weight <br>";
