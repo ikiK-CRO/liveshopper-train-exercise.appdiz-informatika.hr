@@ -1,21 +1,40 @@
 <?php
-
+error_reporting(E_ALL);
+ini_set('error_reporting', E_ALL);
 class Train
 {
     public $TrainCars = [];
 
     function set_TrainCars($car, $position)
     {
-        if ($position === "back") {
-            array_push($this->TrainCars, $car);
-        } elseif ($position === "front") {
-            array_unshift($this->TrainCars, $car);
+        if (sizeof($this->TrainCars) >= 3) {
+            return false;
+        } else {
+            if ($position === "back") {
+                array_push($this->TrainCars, $car);
+            } elseif ($position === "front") {
+                array_unshift($this->TrainCars, $car);
+            }
         }
     }
 
     function get_Train()
     {
-        return $this;
+        return $this->TrainCars;
+    }
+
+    function get_Train_Carts()
+    {
+        return sizeof($this->TrainCars);
+    }
+
+    function get_Train_Weight()
+    {
+        $count = 0;
+        foreach ($this->TrainCars as $car) {
+            $count += $car->get_weight();
+        }
+        return $count;
     }
 }
 
@@ -24,6 +43,7 @@ $train = new Train();
 class TrainCar
 {
     public $weight;
+    public $type;
 
     function set_weight($weight)
     {
@@ -33,20 +53,40 @@ class TrainCar
     {
         return $this->weight;
     }
+
+    function set_type($type)
+    {
+        $this->type = $type;
+    }
+    function get_type()
+    {
+        return $this->type;
+    }
 }
 
 
 $car1 = new TrainCar();
-$car1->set_weight('1t');
+$car1->set_weight('1');
+$car1->set_type('cargo');
 
 $car2 = new TrainCar();
-$car2->set_weight('2t');
-
+$car2->set_weight('2');
+$car2->set_type('passenger');
 // echo $car1->get_weight() . "<br>";
 // echo $car2->get_weight() . "<br>";
 
+$car3 = new TrainCar();
+$car3->set_weight('3.5');
+$car3->set_type('passenger');
+
+
 $train->set_TrainCars($car1, "front");
 $train->set_TrainCars($car2, "back");
+$train->set_TrainCars($car3, "back");
 
-// echo $train->get_Train() . "<br>";
-print_r($train->get_Train());
+
+// print_r($train->get_Train()) . "<br></br>";
+
+echo $train->get_Train_Carts() . " Cars on train<br>";
+
+print_r($train->get_Train_Weight() . " tones is weight off train.<br>");

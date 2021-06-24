@@ -2,3 +2,26 @@
 Stack trace:
 #0 {main}
   thrown in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 49
+[24-Jun-2021 17:24:32 Europe/Zagreb] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 68
+[24-Jun-2021 17:24:55 Europe/Zagreb] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 68
+[24-Jun-2021 17:25:51 Europe/Zagreb] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 68
+[24-Jun-2021 17:26:04 Europe/Zagreb] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 68
+[24-Jun-2021 17:26:41 Europe/Zagreb] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 69
+[24-Jun-2021 17:28:11 Europe/Zagreb] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 75
+[24-Jun-2021 17:36:04 Europe/Zagreb] PHP Notice:  Undefined variable: sizeof in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 10
+[24-Jun-2021 17:36:04 Europe/Zagreb] PHP Notice:  Trying to get property 'TrainCars' of non-object in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 10
+[24-Jun-2021 17:36:04 Europe/Zagreb] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 10
+[24-Jun-2021 17:36:04 Europe/Zagreb] PHP Notice:  Undefined variable: sizeof in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 10
+[24-Jun-2021 17:36:04 Europe/Zagreb] PHP Notice:  Trying to get property 'TrainCars' of non-object in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 10
+[24-Jun-2021 17:36:04 Europe/Zagreb] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 10
+[24-Jun-2021 17:43:56 Europe/Zagreb] PHP Notice:  Array to string conversion in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 82
+[24-Jun-2021 17:45:44 Europe/Zagreb] PHP Notice:  Undefined index: weight in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 33
+[24-Jun-2021 17:45:59 Europe/Zagreb] PHP Notice:  Undefined index: weight in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 33
+[24-Jun-2021 17:46:52 Europe/Zagreb] PHP Notice:  Array to string conversion in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 87
+[24-Jun-2021 17:52:53 Europe/Zagreb] PHP Fatal error:  Uncaught Error: Cannot use object of type TrainCar as array in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php:36
+Stack trace:
+#0 /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php(93): Train->get_Train_Weight()
+#1 {main}
+  thrown in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 36
+[24-Jun-2021 17:53:16 Europe/Zagreb] PHP Notice:  Object of class TrainCar could not be converted to number in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 36
+[24-Jun-2021 17:53:16 Europe/Zagreb] PHP Notice:  Object of class TrainCar could not be converted to number in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 36
