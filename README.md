@@ -10,10 +10,15 @@ A train is made up of a series of train cars. Write two PHP classes; "Train" and
 Must be able to:
 
 ● Set the weight of a TrainCar.
+
 ● Get the weight of a TrainCar.
+
 ● Add TrainCars to the Train, either at the front or back, with a limit of 30 cars.
+
 ● Remove a TrainCar from either end, reporting a problem if there are none left to remove.
+
 ● Ask the Train how many cars are currently in the Train.
+
 ● Get the total weight of the Train.
 
 After writing the classes show an example of how to use them.
