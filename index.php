@@ -1,13 +1,17 @@
 <?php
 error_reporting(E_ALL);
 ini_set('error_reporting', E_ALL);
+
+
+//CLASS's:
+
 class Train
 {
     public $TrainCars = [];
 
     function set_TrainCars($car, $position)
     {
-        if (sizeof($this->TrainCars) >= 3) {
+        if (sizeof($this->TrainCars) >= 3) { //CHANGE TO 30
             return false;
         } else {
             if ($position === "back") {
@@ -23,9 +27,14 @@ class Train
         return $this->TrainCars;
     }
 
-    function get_Train_Carts()
+    function get_Train_Carts_count()
     {
         return sizeof($this->TrainCars);
+    }
+
+    function get_Train_Carts()
+    {
+        return $this->TrainCars;
     }
 
     function get_Train_Weight()
@@ -63,36 +72,44 @@ class TrainCar
     }
 }
 
+
+//EXAMPLES:
+
 // NEW TRAIN
 $train = new Train();
 
-//NEW CARTS EXAMPLES:
-$car1 = new TrainCar();
-$car1->set_weight('1');
-$car1->set_type('cargo');
+$cars = [["1", "cargo", "front"], ["2", "passenger", "back"], ["3.5", "passenger", "back"]];
 
-$car2 = new TrainCar();
-$car2->set_weight('2');
-$car2->set_type('passenger');
+foreach ($cars as $car) {
+    addCars($car, $train);
+}
 
+function addCars($car, $train)
+{
+    $newcar = new TrainCar();
+    $newcar->set_weight($car[0]);
+    $newcar->set_type($car[1]);
 
-$car3 = new TrainCar();
-$car3->set_weight('3.5');
-$car3->set_type('passenger');
+    if ($train->set_TrainCars($newcar, $car[2]) === false) {
+        echo  "Limit of cars excited<br>";
+    }
+}
 
+//NEW SINGLE CAR
+$newcar = ["2.5", "cargo", "back"];
+addCars($newcar, $train);
 
-$train->set_TrainCars($car1, "front");
-$train->set_TrainCars($car2, "back");
-$train->set_TrainCars($car3, "back");
-
-
-// print_r($train->get_Train()) . "<br></br>";
 
 // GET NUMBER OF TRAIN CARTS
-echo $train->get_Train_Carts() . " Cars on train<br>";
+echo $train->get_Train_Carts_count() . " Cars on train<br>";
 
 // GET WEIGHT OF TRAIN
 echo $train->get_Train_Weight() . " tones is weight off train.<br>";
 
-// GET WEIGHT OF PARTICULAR TRAIN CAR
-echo $car1->get_weight() . " car1 weight <br>";
+// GET WEIGHT OF PARTICULAR TRAIN CAR USING INDEX OF CAR ON TRAIN
+echo  $train->get_Train_Carts()[2]->get_weight() . " particular train car weight <br>";
+
+
+// print_r($train->set_TrainCars($car3, "back"));
+
+// print_r($train->get_Train()) . "<br></br>";
