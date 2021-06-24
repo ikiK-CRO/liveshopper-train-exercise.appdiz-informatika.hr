@@ -26,7 +26,11 @@ After writing the classes show an example of how to use them.
 Bonus: Show best way to have different types of TrainCars (i.e. cargo, passenger, engine, etc).
 
 
+
+
 # USAGE EXAMPLES:
+
+LIVE: https://liveshopper-train-exercise.appdiz-informatika.hr/
 
 - NEW SINGLE CAR
 
@@ -68,6 +72,6 @@ EXAMPLE WITHOUT ARRAYS FOR SINGLE CAR
 ```if($train->set_TrainCars($car1, "back") === false){ echo  "Limit of cars excited<br>"; }```
 
  - GET SINGLE CAR WEIGHT
- 
+
  ```$car1->get_weight()```
    

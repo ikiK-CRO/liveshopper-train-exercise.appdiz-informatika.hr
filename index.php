@@ -92,6 +92,14 @@ foreach ($cars as $car) {
     addCars($car, $train);
 }
 
+
+//NEW SINGLE CAR
+$newcar = ["2.5", "cargo", "front"];
+addCars($newcar, $train);
+
+
+
+
 function addCars($car, $train)
 {
     $newcar = new TrainCar();
@@ -108,9 +116,7 @@ if ($train->remove_TrainCars("back") === false) {
     echo  "No cars to remove from train<br>";
 }
 
-//NEW SINGLE CAR
-$newcar = ["2.5", "cargo", "front"];
-addCars($newcar, $train);
+
 
 
 // GET NUMBER OF TRAIN CARTS
