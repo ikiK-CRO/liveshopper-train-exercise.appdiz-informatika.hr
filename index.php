@@ -85,6 +85,13 @@ class TrainCar
 $train = new Train();
 
 
+
+
+
+
+
+
+
 //EXAMPLES:
 
 //ARRAY ADDING USING FUNCTION
@@ -100,7 +107,6 @@ $newcar = ["2.5", "cargo", "front"];
 addCars($newcar, $train);
 
 
-
 // CREATE, FILL AND ADD CARS TO TRAIN FUNCTION
 function addCars($car, $train)
 {
@@ -112,6 +118,7 @@ function addCars($car, $train)
         echo  "Limit of cars excited<br>";
     }
 }
+
 
 //REMOVE CAR with:  "back" OR "front"
 if ($train->remove_TrainCars("back") === false) {
@@ -146,6 +153,5 @@ $car1->set_type('passenger');
 if ($train->set_TrainCars($car1, "back") === false) {
     echo  "Limit of cars excited<br>";
 }
-
 //GET SINGLE CAR WEIGHT
 $car1->get_weight();
