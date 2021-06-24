@@ -1,0 +1,4 @@
+[24-Jun-2021 17:10:39 Europe/Zagreb] PHP Fatal error:  Uncaught Error: Object of class Train could not be converted to string in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php:49
+Stack trace:
+#0 {main}
+  thrown in /home/appdizinformatik/liveshopper-train-exercise.appdiz-informatika.hr/index.php on line 49
