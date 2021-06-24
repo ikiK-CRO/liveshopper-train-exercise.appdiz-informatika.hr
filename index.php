@@ -24,10 +24,14 @@ class Train
 
     function remove_TrainCars($position)
     {
-        if ($position === "front") {
-            array_shift($this->TrainCars);
-        } elseif ("back") {
-            array_pop($this->TrainCars);
+        if (sizeof($this->TrainCars) != 0) {
+            if ($position === "front") {
+                array_shift($this->TrainCars);
+            } elseif ("back") {
+                array_pop($this->TrainCars);
+            }
+        } else {
+            return false;
         }
     }
 
@@ -100,8 +104,9 @@ function addCars($car, $train)
 }
 
 //REMOVE CAR with:  "back" OR "front"
-$train->remove_TrainCars("back");
-
+if ($train->remove_TrainCars("back") === false) {
+    echo  "No cars to remove from train<br>";
+}
 
 //NEW SINGLE CAR
 $newcar = ["2.5", "cargo", "front"];
@@ -118,6 +123,7 @@ echo $train->get_Train_Weight() . " - tones is weight off train.<br>";
 echo  $train->get_Train_Carts()[1]->get_weight() . " - particular train car weight <br>";
 
 print_r($train->get_Train_Carts()) . "<br></br>";
+
 
 //EXAMPLE WITHOUT ARRAYS FOR SINGLE CAR 
 
