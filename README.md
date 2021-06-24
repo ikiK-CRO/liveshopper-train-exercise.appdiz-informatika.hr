@@ -50,6 +50,7 @@ GET WEIGHT OF TRAIN
 ```$train->get_Train_Carts()[2]->get_weight()```
 
  GET TYPE OF PARTICULAR TRAIN CAR USING INDEX OF CAR ON TRAIN
+
 ```$train->get_Train_Carts()[1]->get_type()```
 
 
@@ -61,9 +62,7 @@ EXAMPLE WITHOUT ARRAYS FOR SINGLE CAR
 ```$car1->set_weight('3.5');```
 ```$car1->set_type('passenger');```
 
-```if($train->set_TrainCars($car1, "back") === false){
-     echo  "Limit of cars excited<br>";
- }```
+```if($train->set_TrainCars($car1, "back") === false){ echo  "Limit of cars excited<br>"; }```
 
  GET SINGLE CAR WEIGHT
  ```$car1->get_weight()```
