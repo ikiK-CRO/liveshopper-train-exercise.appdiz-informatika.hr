@@ -28,6 +28,15 @@ Bonus: Show best way to have different types of TrainCars (i.e. cargo, passenger
 
 # USAGE EXAMPLES:
 
+NEW SINGLE CAR
+
+```$newcar = ["2.5", "cargo", "back"];```    
+```addCars($newcar, $train);```
+
+REMOVE CAR with:  "back" OR "front"
+
+```    $train->remove_TrainCars("back");``` 
+
 GET NUMBER OF TRAIN CARTS
 
 ```$train->get_Train_Carts_count()```
@@ -40,8 +49,7 @@ GET WEIGHT OF TRAIN
 
 ```$train->get_Train_Carts()[2]->get_weight()```
 
+ GET WEIGHT OF PARTICULAR TRAIN CAR IF ADDED AND SAVED AS SINGLE CAR
 
-NEW SINGLE CAR
-
-```$newcar = ["2.5", "cargo", "back"];```    
-```addCars($newcar, $train);```
+```$newcar->get_weight()```
+   

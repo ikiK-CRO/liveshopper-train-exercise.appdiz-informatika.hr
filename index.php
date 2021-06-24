@@ -22,9 +22,13 @@ class Train
         }
     }
 
-    function get_Train()
+    function remove_TrainCars($position)
     {
-        return $this->TrainCars;
+        if ($position === "front") {
+            array_shift($this->TrainCars);
+        } elseif ("back") {
+            array_pop($this->TrainCars);
+        }
     }
 
     function get_Train_Carts_count()
@@ -50,8 +54,8 @@ class Train
 
 class TrainCar
 {
-    public $weight;
-    public $type;
+    public $weight; // PROPERTY WEIGHT
+    public $type; // PROPERTY TYPE
 
     function set_weight($weight)
     {
@@ -95,21 +99,25 @@ function addCars($car, $train)
     }
 }
 
+//REMOVE CAR with:  "back" OR "front"
+$train->remove_TrainCars("back");
+
+
 //NEW SINGLE CAR
-$newcar = ["2.5", "cargo", "back"];
+$newcar = ["2.5", "cargo", "front"];
 addCars($newcar, $train);
 
 
 // GET NUMBER OF TRAIN CARTS
-echo $train->get_Train_Carts_count() . " Cars on train<br>";
+echo $train->get_Train_Carts_count() . " - Cars on train<br>";
 
 // GET WEIGHT OF TRAIN
-echo $train->get_Train_Weight() . " tones is weight off train.<br>";
+echo $train->get_Train_Weight() . " - tones is weight off train.<br>";
 
 // GET WEIGHT OF PARTICULAR TRAIN CAR USING INDEX OF CAR ON TRAIN
-echo  $train->get_Train_Carts()[2]->get_weight() . " particular train car weight <br>";
+echo  $train->get_Train_Carts()[1]->get_weight() . " - particular train car weight <br>";
 
-
+print_r($train->get_Train_Carts()) . "<br></br>";
 
 //EXAMPLE WITHOUT ARRAYS FOR SINGLE CAR 
 
