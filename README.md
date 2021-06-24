@@ -39,3 +39,9 @@ GET WEIGHT OF TRAIN
  GET WEIGHT OF PARTICULAR TRAIN CAR USING INDEX OF CAR ON TRAIN
 
 ```$train->get_Train_Carts()[2]->get_weight()```
+
+
+NEW SINGLE CAR
+
+```$newcar = ["2.5", "cargo", "back"];```    
+```addCars($newcar, $train);```

@@ -110,6 +110,22 @@ echo $train->get_Train_Weight() . " tones is weight off train.<br>";
 echo  $train->get_Train_Carts()[2]->get_weight() . " particular train car weight <br>";
 
 
+
+//EXAMPLE WITHOUT ARRAYS FOR SINGLE CAR 
+
+// $car1 = new TrainCar();
+// $car1->set_weight('3.5');
+// $car1->set_type('passenger');
+
+// if($train->set_TrainCars($car1, "back") === false){
+//     echo  "Limit of cars excited<br>";
+// }
+
+// GET SINGLE CAR WEIGHT
+//$car1->get_weight()
+
+
+
 // print_r($train->set_TrainCars($car3, "back"));
 
 // print_r($train->get_Train()) . "<br></br>";
