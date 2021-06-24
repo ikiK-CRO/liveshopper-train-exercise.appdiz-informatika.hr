@@ -81,11 +81,11 @@ class TrainCar
 }
 
 
-//EXAMPLES:
-
 // NEW TRAIN
 $train = new Train();
 
+
+//EXAMPLES:
 $cars = [["1", "cargo", "front"], ["2", "passenger", "back"], ["3.5", "passenger", "back"]];
 
 foreach ($cars as $car) {
@@ -122,7 +122,11 @@ echo $train->get_Train_Weight() . " - tones is weight off train.<br>";
 // GET WEIGHT OF PARTICULAR TRAIN CAR USING INDEX OF CAR ON TRAIN
 echo  $train->get_Train_Carts()[1]->get_weight() . " - particular train car weight <br>";
 
-print_r($train->get_Train_Carts()) . "<br></br>";
+// GET TYPE OF PARTICULAR TRAIN CAR USING INDEX OF CAR ON TRAIN
+echo  $train->get_Train_Carts()[1]->get_type() . " - particular train car type <br>";
+
+
+// print_r($train->get_Train_Carts()) . "<br>"; // GET ALL CARS IN TRAIN AS ARRAY
 
 
 //EXAMPLE WITHOUT ARRAYS FOR SINGLE CAR 
@@ -137,9 +141,3 @@ print_r($train->get_Train_Carts()) . "<br></br>";
 
 // GET SINGLE CAR WEIGHT
 //$car1->get_weight()
-
-
-
-// print_r($train->set_TrainCars($car3, "back"));
-
-// print_r($train->get_Train()) . "<br></br>";
