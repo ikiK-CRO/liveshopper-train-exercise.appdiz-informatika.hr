@@ -9,9 +9,9 @@ class Train
 {
     public $TrainCars = [];
 
-    function set_TrainCars($car, $position)
+    function set_TrainCars($car, $position) // TAKES TrainCar OBJECT AND POSITION ON TRAN AS ARGUMENTS
     {
-        if (sizeof($this->TrainCars) >= 3) { //CHANGE TO 30
+        if (sizeof($this->TrainCars) >= 3) { //CHANGE TO 30, 3 IS FOR TESTING 
             return false;
         } else {
             if ($position === "back") {
@@ -22,7 +22,7 @@ class Train
         }
     }
 
-    function remove_TrainCars($position)
+    function remove_TrainCars($position) // TAKES POSITION OF CAR AS ARGUMENT
     {
         if (sizeof($this->TrainCars) != 0) {
             if ($position === "front") {
@@ -86,6 +86,8 @@ $train = new Train();
 
 
 //EXAMPLES:
+
+//ARRAY ADDING USING FUNCTION
 $cars = [["1", "cargo", "front"], ["2", "passenger", "back"], ["3.5", "passenger", "back"]];
 
 foreach ($cars as $car) {
@@ -93,13 +95,13 @@ foreach ($cars as $car) {
 }
 
 
-//NEW SINGLE CAR
+//NEW SINGLE CAR USING FUNCTION
 $newcar = ["2.5", "cargo", "front"];
 addCars($newcar, $train);
 
 
 
-
+// CREATE, FILL AND ADD CARS TO TRAIN FUNCTION
 function addCars($car, $train)
 {
     $newcar = new TrainCar();
@@ -126,24 +128,24 @@ echo $train->get_Train_Carts_count() . " - Cars on train<br>";
 echo $train->get_Train_Weight() . " - tones is weight off train.<br>";
 
 // GET WEIGHT OF PARTICULAR TRAIN CAR USING INDEX OF CAR ON TRAIN
-echo  $train->get_Train_Carts()[1]->get_weight() . " - particular train car weight <br>";
+echo  $train->get_Train_Carts()[0]->get_weight() . " - particular train car weight <br>";
 
 // GET TYPE OF PARTICULAR TRAIN CAR USING INDEX OF CAR ON TRAIN
-echo  $train->get_Train_Carts()[1]->get_type() . " - particular train car type <br>";
+echo  $train->get_Train_Carts()[0]->get_type() . " - particular train car type <br>";
 
 
 // print_r($train->get_Train_Carts()) . "<br>"; // GET ALL CARS IN TRAIN AS ARRAY
 
 
+
 //EXAMPLE WITHOUT ARRAYS FOR SINGLE CAR 
+$car1 = new TrainCar();
+$car1->set_weight('3.5');
+$car1->set_type('passenger');
 
-// $car1 = new TrainCar();
-// $car1->set_weight('3.5');
-// $car1->set_type('passenger');
+if ($train->set_TrainCars($car1, "back") === false) {
+    echo  "Limit of cars excited<br>";
+}
 
-// if($train->set_TrainCars($car1, "back") === false){
-//     echo  "Limit of cars excited<br>";
-// }
-
-// GET SINGLE CAR WEIGHT
-//$car1->get_weight()
+//GET SINGLE CAR WEIGHT
+$car1->get_weight();
