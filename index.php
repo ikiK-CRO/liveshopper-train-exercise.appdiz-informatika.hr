@@ -96,7 +96,7 @@ $carPositions = ["back", "front"];
 //EXAMPLES:
 
 //ARRAY ADDING USING FUNCTION
-$cars = [[1, "cargo", "front"], [2.4, "passenger", "back"], [3.6, "passenger", $carPositions[0]]];
+$cars = [[1, "cargo", "front"], [2.4, "passenger", "back"], [3.6, "passenger", "front"]];
 
 foreach ($cars as $car) {
     addCars($car, $train, $carTypes, $carPositions);
