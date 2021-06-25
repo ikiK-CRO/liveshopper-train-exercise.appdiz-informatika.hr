@@ -7,12 +7,13 @@ ini_set('error_reporting', E_ALL);
 
 class Train
 {
-    public $TrainCars = [];
+    public $TrainCars;
     public $carTypes;
     public $carPositions;
 
     public function __construct()
     {
+        $this->TrainCars = [];
         $this->carTypes = ["cargo", "passenger", "engine"];
         $this->carPositions = ["back", "front"];
     }
