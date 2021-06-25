@@ -34,8 +34,17 @@ LIVE: https://liveshopper-train-exercise.appdiz-informatika.hr/
 
 - NEW SINGLE CAR
 
+Allowed values is array weight, type, position. 
+
+Type and position are cheaked against allowed values of: 
+
+``` ["cargo", "passenger", "engine"];```  
+``` ["back", "front"];``` 
+
+EXAMPLE:
+
 ```$newcar = ["2.5", "cargo", "back"]```    
-```addCars($newcar, $train, $carTypes, $carPositions)```
+```addCars($newcar)```
 
 - REMOVE CAR with:  "back" OR "front"
 
@@ -57,21 +66,4 @@ LIVE: https://liveshopper-train-exercise.appdiz-informatika.hr/
 
 ```$train->get_Train_Carts()[1]->get_type()```
 
-
-
-
-EXAMPLE WITHOUT ARRAYS FOR SINGLE CAR WITH SAVING OBJECT
-
-
-- SET WEIGHT AND TYPE
-
-```$car1 = new TrainCar();```
-```$car1->set_weight('3.5');```
-```$car1->set_type('passenger');```
-
-```if($train->set_TrainCars($car1, "back") === false){ echo  "Limit of cars excited<br>"; }```
-
- - GET SINGLE CAR WEIGHT
-
- ```$car1->get_weight()```
    
