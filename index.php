@@ -120,13 +120,13 @@ $train = new Train();
 $cars = [[1, "cargo", "front"], [2.4, "passenger", "back"], [3.6, "cargo", "front"]];
 
 foreach ($cars as $car) {
-    // print_r($train->addCars($car));
+    print_r($train->addCars($car));
 }
 
 
 //NEW SINGLE CAR USING FUNCTION
 $newcar = ["2.5", "cargo", "front"];
-// print_r($train->addCars($newcar));
+print_r($train->addCars($newcar));
 
 //REMOVE CAR with:  "back" OR "front" ie: pre-defined $carPositions index array
 print_r($train->remove_TrainCars("front"));
