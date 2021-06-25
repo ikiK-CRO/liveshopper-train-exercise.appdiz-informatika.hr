@@ -14,8 +14,6 @@ class Train
     public function __construct()
     {
         $this->TrainCars = [];
-        // $this->carTypes = ["cargo", "passenger", "engine"];
-        // $this->carPositions = ["back", "front"];
     }
 
     public function addCars($car)
