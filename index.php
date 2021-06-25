@@ -8,20 +8,20 @@ ini_set('error_reporting', E_ALL);
 class Train
 {
     public $TrainCars;
-    public $carTypes;
-    public $carPositions;
+    const carTypes = ["cargo", "passenger", "engine"];
+    const carPositions = ["back", "front"];
 
     public function __construct()
     {
         $this->TrainCars = [];
-        $this->carTypes = ["cargo", "passenger", "engine"];
-        $this->carPositions = ["back", "front"];
+        // $this->carTypes = ["cargo", "passenger", "engine"];
+        // $this->carPositions = ["back", "front"];
     }
 
     public function addCars($car)
     {
 
-        if (sizeof($car) === 3 && is_numeric($car[0]) &&  in_array($car[1], $this->carTypes) &&  in_array($car[2], $this->carPositions)) {
+        if (sizeof($car) === 3 && is_numeric($car[0]) &&  in_array($car[1], self::carTypes) &&  in_array($car[2], self::carPositions)) {
             $newcar = new TrainCar();
             $newcar->set_weight($car[0]);
             $newcar->set_type($car[1]);
@@ -50,7 +50,7 @@ class Train
 
     function remove_TrainCars($position) // TAKES POSITION OF CAR AS ARGUMENT
     {
-        if (in_array($position, $this->carPositions)) {
+        if (in_array($position, self::carPositions)) {
             if (sizeof($this->TrainCars) != 0) {
                 if ($position === "front") {
                     array_shift($this->TrainCars);
