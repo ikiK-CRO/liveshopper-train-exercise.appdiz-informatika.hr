@@ -29,7 +29,7 @@ class Train
                 return  "Limit of cars excited<br>";
             }
         } else {
-            return  "Invalid car entry value<br>";
+            return  "Invalid car entry value/s<br>";
         }
     }
 
