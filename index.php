@@ -144,4 +144,3 @@ echo  $train->get_Train_Carts()[0]->get_weight() . " - particular train car weig
 
 // GET TYPE OF PARTICULAR TRAIN CAR USING INDEX OF CAR ON TRAIN
 echo  $train->get_Train_Carts()[0]->get_type() . " - particular train car type <br>";
-
