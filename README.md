@@ -34,9 +34,9 @@ LIVE: https://liveshopper-train-exercise.appdiz-informatika.hr/
 
 - NEW SINGLE CAR
 
-Allowed values is array weight, type, position. 
+Allowed values for adding an new car is array weight, type, position. 
 
-Type and position are cheaked against allowed values of: 
+Type and position are checked against allowed values of: 
 
 ``` ["cargo", "passenger", "engine"];```  
 ``` ["back", "front"];``` 
