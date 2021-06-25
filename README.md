@@ -44,7 +44,7 @@ Type and position are checked against allowed values of:
 EXAMPLE:
 
 ```$newcar = ["2.5", "cargo", "back"]```    
-```addCars($newcar)```
+```$train->addCars($newcar)```
 
 - REMOVE CAR with:  "back" OR "front"
 
