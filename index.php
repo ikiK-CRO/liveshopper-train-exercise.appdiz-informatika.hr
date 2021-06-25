@@ -128,7 +128,7 @@ foreach ($cars as $car) {
 $newcar = ["2.5", "cargo", "front"];
 print_r($train->addCars($newcar));
 
-//REMOVE CAR with:  "back" OR "front" ie: pre-defined $carPositions index array
+//REMOVE CAR with:  "back" OR "front"
 print_r($train->remove_TrainCars("front"));
 
 
