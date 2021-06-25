@@ -20,7 +20,7 @@ class Train
     public function addCars($car)
     {
 
-        if (sizeof($car) === 3 && is_numeric($car[0]) &&  in_array($car[1], $this->carTypes) &&  in_array($car[1], $this->carTypes) &&  in_array($car[2], $this->carPositions)) {
+        if (sizeof($car) === 3 && is_numeric($car[0]) &&  in_array($car[1], $this->carTypes) &&  in_array($car[2], $this->carPositions)) {
             $newcar = new TrainCar();
             $newcar->set_weight($car[0]);
             $newcar->set_type($car[1]);
