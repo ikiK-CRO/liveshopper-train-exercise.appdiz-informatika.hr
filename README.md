@@ -35,7 +35,7 @@ LIVE: https://liveshopper-train-exercise.appdiz-informatika.hr/
 - NEW SINGLE CAR
 
 ```$newcar = ["2.5", "cargo", "back"]```    
-```addCars($newcar, $train)```
+```addCars($newcar, $train, $carTypes, $carPositions)```
 
 - REMOVE CAR with:  "back" OR "front"
 
@@ -60,7 +60,7 @@ LIVE: https://liveshopper-train-exercise.appdiz-informatika.hr/
 
 
 
-EXAMPLE WITHOUT ARRAYS FOR SINGLE CAR 
+EXAMPLE WITHOUT ARRAYS FOR SINGLE CAR WITH SAVING OBJECT
 
 
 - SET WEIGHT AND TYPE
