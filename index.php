@@ -16,7 +16,7 @@ class Train
         $this->TrainCars = [];
     }
 
-    public function addCars($car)
+    function addCars($car)
     {
 
         if (sizeof($car) === 3 && is_numeric($car[0]) &&  in_array($car[1], self::carTypes) &&  in_array($car[2], self::carPositions)) {
@@ -80,6 +80,11 @@ class Train
             $count += $car->get_weight();
         }
         return $count;
+    }
+
+    function __destruct()
+    {
+        echo "Success";
     }
 }
 
