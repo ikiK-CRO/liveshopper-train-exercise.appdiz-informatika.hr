@@ -11,7 +11,7 @@ class Train
     const carTypes = ["cargo", "passenger", "engine"];
     const carPositions = ["back", "front"];
 
-    public function __construct()
+    function __construct()
     {
         $this->TrainCars = [];
     }
