@@ -81,11 +81,6 @@ class Train
         }
         return $count;
     }
-
-    function __destruct()
-    {
-        echo "Success";
-    }
 }
 
 
