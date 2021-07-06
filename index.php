@@ -84,7 +84,7 @@ class Train
 }
 
 
-class TrainCar
+class TrainCar extends Train
 {
     public $weight; // TrainCar WEIGHT
     public $type; // TrainCar TYPE
